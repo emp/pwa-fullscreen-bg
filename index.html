@@ -9,10 +9,15 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/icon.svg">
     <style>
+        html {
+            background: #000000;
+            height: 100%;
+        }
         body {
             margin: 0;
             padding: 0;
             background: linear-gradient(30deg, #000000 0%, #C71585 25%, #4B0082 50%, #191970 75%, #000000 100%);
+            background-attachment: fixed;
             min-height: 100vh;
             padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
             box-sizing: border-box;
