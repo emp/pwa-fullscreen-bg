@@ -16,36 +16,19 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(30deg, #000000 0%, #C71585 25%, #4B0082 50%, #191970 75%, #000000 100%);
-            background-attachment: fixed;
+            background: 
+                linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100px),
+                linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100px),
+                linear-gradient(30deg, #000000 0%, #C71585 25%, #4B0082 50%, #191970 75%, #000000 100%);
+            background-attachment: fixed, fixed, fixed;
+            background-size: 100% 100px, 100% 100px, 100% 100%;
+            background-position: top, bottom, center;
+            background-repeat: no-repeat, no-repeat, no-repeat;
             min-height: 100vh;
             padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
             box-sizing: border-box;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
-            position: relative;
-        }
-        body::before,
-        body::after {
-            content: '';
-            position: fixed;
-            left: 0;
-            right: 0;
-            height: 100px;
-            pointer-events: none;
-            z-index: 1;
-        }
-        body::before {
-            top: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-        }
-        body::after {
-            bottom: 0;
-            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-        }
-        body > div {
-            position: relative;
-            z-index: 2;
         }
     </style>
 </head>
