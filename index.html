@@ -23,6 +23,29 @@
             box-sizing: border-box;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
+            position: relative;
+        }
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 100px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        body::before {
+            top: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        }
+        body::after {
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        }
+        body > div {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
