@@ -1,0 +1,16 @@
+{
+  "name": "Purple Fullscreen",
+  "short_name": "Purple",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#8B00FF",
+  "theme_color": "#8B00FF",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
